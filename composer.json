@@ -1,0 +1,16 @@
+{
+    "name": "roma/itea-sorter",
+    "authors": [
+        {
+            "name": "Roman",
+            "email": "karlson2006@ukr.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

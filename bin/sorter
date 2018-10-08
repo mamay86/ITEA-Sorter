@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+
+<?php
+
+use App\Sorter;
+
+$sort = new Sorter("sadfsdfsd");

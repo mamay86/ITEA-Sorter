@@ -2,6 +2,29 @@
 
 <?php
 
-use App\Sorter;
+use App\Strategy\Sorter;
+use App\Strategy\NumSorter;
+use App\Strategy\StringSorter;
+use App\Strategy\DateSorter;
 
-$sort = new Sorter("sadfsdfsd");
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$arrNum = array(5,3,222,9,11);
+$arrString = array('abcde', 'bac', 'cdbadd', 'dabc');
+$arrDate = array('2018-03-03', '2014-03-02', '2011-03-01', '2016-03-01');
+
+try {
+    $numSort = new Sorter(new NumSorter());
+    $numSortResult = $numSort->sort($arrNum, 'desc');
+    var_dump($numSortResult);
+
+    $stringSort = new Sorter(new StringSorter());
+    $stringSortResult = $stringSort->sort($arrString, 'length');
+    var_dump($stringSortResult);
+
+    $dateSort = new Sorter(new DateSorter());
+    $dateSortResult = $dateSort->sort($arrDate, 'asc');
+    var_dump($dateSortResult);
+} catch (\LogicException $e) {
+    echo $e->getMessage() . \PHP_EOL;
+}

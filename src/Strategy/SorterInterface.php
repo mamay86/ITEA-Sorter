@@ -10,9 +10,9 @@ namespace App\Strategy;
 
 interface SorterInterface
 {
-    public function asc($a, $b);
+    public function asc($a, $b) : int;
 
-    public function desc($a, $b);
+    public function desc($a, $b) : int;
 
     public function length($a, $b);
 }

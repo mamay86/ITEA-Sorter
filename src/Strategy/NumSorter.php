@@ -10,17 +10,38 @@ namespace App\Strategy;
 
 class NumSorter implements SorterInterface
 {
-    public function asc($a, $b)
+    /**
+     * Logic of the asc sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
+    public function asc($a, $b) : int
     {
         return $a > $b;
     }
 
-    public function desc($a, $b)
+    /**
+     * Logic of the desc sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
+    public function desc($a, $b) : int
     {
         return $a < $b;
     }
 
-    public function length($a, $b)
+    /**
+     * Logic of the length sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
+    public function length($a, $b) : int
     {
         $aLength = strlen((string)$a);
         $bLength = strlen((string)$b);

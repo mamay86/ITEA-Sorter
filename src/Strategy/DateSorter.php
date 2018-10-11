@@ -10,20 +10,41 @@ namespace App\Strategy;
 
 class DateSorter implements SorterInterface
 {
-    public function asc($a, $b)
+    /**
+     * Logic of the asc sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
+    public function asc($a, $b) : int
     {
         $aDate = new \DateTime($a);
         $bDate = new \DateTime($b);
         return $aDate > $bDate;
     }
 
-    public function desc($a, $b)
+    /**
+     * Logic of the desc sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
+    public function desc($a, $b) : int
     {
         $aDate = new \DateTime($a);
         $bDate = new \DateTime($b);
         return $aDate < $bDate;
     }
 
+    /**
+     * Logic of the length sorting
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     */
     public function length($a, $b)
     {
         throw new \LogicException(\sprintf('Can\'t use method %s for %s', __METHOD__, __CLASS__));

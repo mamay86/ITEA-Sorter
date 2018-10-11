@@ -17,7 +17,14 @@ class Sorter
         $this->sorter = $sorter;
     }
 
-    public function sort($elements, $method)
+    /**
+     * Sorting element by method
+     *
+     * @param array $elements
+     * @param $method
+     * @return array
+     */
+    public function sort(array $elements, $method) :array
     {
         uasort($elements, array($this->sorter, $method));
         return $elements;

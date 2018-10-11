@@ -8,7 +8,6 @@
 
 namespace App\Strategy;
 
-
 class StringSorter implements SorterInterface
 {
     public function asc($a, $b)

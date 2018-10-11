@@ -12,7 +12,8 @@ class Sorter
 {
     private $sorter;
 
-    public function __construct(SorterInterface $sorter) {
+    public function __construct(SorterInterface $sorter)
+    {
         $this->sorter = $sorter;
     }
 

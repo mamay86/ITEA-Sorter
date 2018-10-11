@@ -8,7 +8,6 @@
 
 namespace App\Strategy;
 
-
 class NumSorter implements SorterInterface
 {
     public function asc($a, $b)
